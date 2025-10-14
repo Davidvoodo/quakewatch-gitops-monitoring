@@ -6,18 +6,9 @@ metadata:
 spec:
   project: quakewatch-proj
   source:
-    repoURL: https://github.com/YOUR_GITHUB_USERNAME/quakewatch-gitops-monitoring.git
+    repoURL: https://github.com/Davidvoodo/quakewatch-gitops-monitoring.git
     targetRevision: main
     path: helm/quakewatch
-    helm:
-      releaseName: quakewatch
-      values: |
-        image:
-          repository: docker.io/david0mizrahi/quakewatch
-          tag: "1.0.0"
-        serviceMonitor:
-          enabled: true
-          releaseLabel: monitoring
   destination:
     server: https://kubernetes.default.svc
     namespace: quakewatch
@@ -25,3 +16,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
