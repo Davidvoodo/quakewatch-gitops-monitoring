@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Virtual envs
+.venv/
+.venv1/
+venv/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# Build / logs
+dist/
+build/
+*.log
+
+# Kubernetes / Helm artifacts local
+**/.terraform/
