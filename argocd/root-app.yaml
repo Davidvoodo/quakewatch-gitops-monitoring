@@ -6,7 +6,7 @@ metadata:
 spec:
   project: quakewatch-proj
   source:
-    repoURL: https://github.com/YOUR_GITHUB_USERNAME/quakewatch-gitops-monitoring.git
+    repoURL: https://github.com/Davidvoodo/quakewatch-gitops-monitoring.git
     targetRevision: main
     path: argocd/apps
   destination:
