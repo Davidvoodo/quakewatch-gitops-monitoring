@@ -8,8 +8,8 @@ spec:
   sourceRepos:
     - '*'
   destinations:
-    - namespace: quakewatch
-      server: https://kubernetes.default.svc
+    - namespace: '*'
+      server: '*'
     - namespace: monitoring
       server: https://kubernetes.default.svc
   clusterResourceWhitelist:
