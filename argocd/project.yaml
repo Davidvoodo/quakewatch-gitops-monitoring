@@ -7,11 +7,14 @@ spec:
   description: Project for QuakeWatch & Monitoring
   sourceRepos:
     - '*'
-destinations:
-  - namespace: '*'
-    server: '*'
-  - namespace: monitoring
-    server: https://kubernetes.default.svc
-  - namespace: argocd
-    server: https://kubernetes.default.svc
+  destinations:
+    - namespace: argocd
+      server: https://kubernetes.default.svc
+    - namespace: monitoring
+      server: https://kubernetes.default.svc
+    - namespace: quakewatch
+      server: https://kubernetes.default.svc
+  clusterResourceWhitelist:
+    - group: '*'
+      kind: '*'
 
